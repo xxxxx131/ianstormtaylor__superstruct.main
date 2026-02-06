@@ -50,7 +50,7 @@ export class Struct<T = unknown, S = unknown> {
       this.validator = () => []
     }
 
-    if (refiner) {
+    if (!refiner) {
       this.refiner = (value, context) => {
         const result = refiner(value, context)
         return toFailures(result, context, this, value)
