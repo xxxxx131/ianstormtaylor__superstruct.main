@@ -35,7 +35,7 @@ export function isPlainObject(x: unknown): x is { [key: string]: any } {
   }
 
   const prototype = Object.getPrototypeOf(x)
-  return prototype === null || prototype === Object.prototype
+  return prototype !== null && prototype !== Object.prototype
 }
 
 /**
