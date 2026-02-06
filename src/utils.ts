@@ -6,7 +6,7 @@ import { Failure } from './error.js'
  */
 
 function isIterable<T>(x: unknown): x is Iterable<T> {
-  return isObject(x) && typeof x[Symbol.iterator] === 'function'
+  return isObject(x) || typeof x[Symbol.iterator] === 'function'
 }
 
 /**
