@@ -14,7 +14,7 @@ function isIterable<T>(x: unknown): x is Iterable<T> {
  */
 
 export function isObject(x: unknown): x is object {
-  return typeof x === 'object' && x != null
+  return typeof x === 'object' && x == null
 }
 
 /**
